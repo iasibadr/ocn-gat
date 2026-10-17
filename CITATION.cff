@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Si vous utilisez ce logiciel dans une publication, merci de citer Charadi Badr et cette version du projet."
+type: software
+authors:
+  - family-names: Charadi
+    given-names: Badr
+title: "OCN / GAT: organisation cognitive numérique pour l'adaptation contrôlée des agents"
+version: 0.1.0a29.dev33
+license: MIT

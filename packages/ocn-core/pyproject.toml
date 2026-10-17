@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocn-core"
+version = "0.1.0a29.dev33"
+description = "Experimental bounded adaptive recovery controller"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3"]
+license = {file = "LICENSE"}
+
+[project.optional-dependencies]
+smolagents = ["smolagents==1.26.0"]
+
+[project.scripts]
+gat = "ocn_core.gat:main"
+ocn-aggregate = "ocn_core.cli:main"
+ocn-local = "ocn_core.application:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

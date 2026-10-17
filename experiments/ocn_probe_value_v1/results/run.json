@@ -1,0 +1,4359 @@
+{
+  "protocol_commit": "da3f5c1",
+  "protocol_sha256": "a0356aa486892449c55303ad549c16ea6babe7861aac279473bf284ca59ad880",
+  "code_sha256": "5b1dbd8aacd0614519887607a59af5499f249678452135c9e19f44b5c5e72ac1",
+  "model": {
+    "name": "qwen3.5:9b",
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "size_bytes": 6594474711
+  },
+  "calls": {
+    "perturbations/sticky": 2,
+    "perturbations/alert_classic": 2,
+    "perturbations/ocn_value": 2,
+    "bruit/sticky": 2,
+    "bruit/alert_classic": 2,
+    "bruit/ocn_value": 2
+  },
+  "results": {
+    "perturbations": {
+      "sticky": {
+        "rows": [
+          {
+            "index": 0,
+            "stage": "initial",
+            "alert": null,
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 1,
+              "cells": [
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 1,
+            "stage": "drop_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 0.5,
+            "task_attempts": 5,
+            "task_failures": 1,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 2,
+              "cells": [
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 2,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 3,
+              "cells": [
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 3,
+            "stage": "move_A_mirror",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 4,
+              "cells": [
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 4,
+            "stage": "change_B",
+            "alert": "B",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 0.5,
+            "task_attempts": 5,
+            "task_failures": 1,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 5,
+              "cells": [
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 5,
+            "stage": "alert_B",
+            "alert": "B",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 6,
+              "cells": [
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 6,
+            "stage": "lose_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 2,
+            "task_failures": 2,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": null,
+            "error": "ValueError: Pinned version unavailable on all authorized routes",
+            "memory": {
+              "max_cells": 2,
+              "batches": 6,
+              "cells": [
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 7,
+            "stage": "restore_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 7,
+              "cells": [
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 8,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 8,
+              "cells": [
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          }
+        ],
+        "exact": 9,
+        "timely": 7,
+        "task_attempts": 36,
+        "task_failures": 4,
+        "probes": 0,
+        "probe_failures": 0,
+        "net_value": 8.0
+      },
+      "alert_classic": {
+        "rows": [
+          {
+            "index": 0,
+            "stage": "initial",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 1,
+              "cells": [
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 1,
+            "stage": "drop_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "primary",
+                  "good": false
+                },
+                {
+                  "route": "mirror",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 2,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 2,
+              "cells": [
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 2,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "mirror",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 3,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 3,
+              "cells": [
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 3,
+            "stage": "move_A_mirror",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "mirror",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 4,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 4,
+              "cells": [
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 4,
+            "stage": "change_B",
+            "alert": "B",
+            "watch": {
+              "action": "probe",
+              "document": "B",
+              "attempts": [
+                {
+                  "route": "primary",
+                  "good": false
+                },
+                {
+                  "route": "mirror",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 6,
+            "probe_failures": 2,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 5,
+              "cells": [
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 5,
+            "stage": "alert_B",
+            "alert": "B",
+            "watch": {
+              "action": "probe",
+              "document": "B",
+              "attempts": [
+                {
+                  "route": "mirror",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 7,
+            "probe_failures": 2,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 6,
+              "cells": [
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 6,
+            "stage": "lose_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "mirror",
+                  "good": false
+                },
+                {
+                  "route": "primary",
+                  "good": false
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 2,
+            "task_failures": 2,
+            "probe_attempts": 9,
+            "probe_failures": 4,
+            "response": null,
+            "error": "ValueError: Pinned version unavailable on all authorized routes",
+            "memory": {
+              "max_cells": 2,
+              "batches": 6,
+              "cells": [
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 7,
+            "stage": "restore_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "mirror",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 10,
+            "probe_failures": 4,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 7,
+              "cells": [
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 8,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "mirror",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 11,
+            "probe_failures": 4,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 8,
+              "cells": [
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          }
+        ],
+        "exact": 9,
+        "timely": 9,
+        "task_attempts": 34,
+        "task_failures": 2,
+        "probes": 11,
+        "probe_failures": 4,
+        "net_value": 8.45
+      },
+      "ocn_value": {
+        "rows": [
+          {
+            "index": 0,
+            "stage": "initial",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 1,
+              "cells": [
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.5,
+                  0.5,
+                  0.5,
+                  1.0
+                ],
+                "mirror": [
+                  0.125,
+                  0.5,
+                  0.2,
+                  0.5
+                ]
+              },
+              "hamilton_reference": [
+                0.3125,
+                0.5,
+                0.35,
+                0.75
+              ],
+              "costs": {
+                "primary": 0.56375,
+                "mirror": 0.26625
+              },
+              "temperature": 0.2,
+              "probabilities": {
+                "primary": 0.18429726028236706,
+                "mirror": 0.8157027397176329
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.18000000000000005
+          },
+          {
+            "index": 1,
+            "stage": "drop_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "primary",
+              "risk": 0.40625,
+              "expected_gain": 0.203125,
+              "probe_cost": 0.0703125,
+              "attempts": 2,
+              "observations": {
+                "primary": false,
+                "mirror": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 2,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 2,
+              "cells": [
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.5,
+                  0.5,
+                  0.5,
+                  1.0
+                ],
+                "mirror": [
+                  0.0078125,
+                  0.5,
+                  0.03200000000000001,
+                  0.125
+                ]
+              },
+              "hamilton_reference": [
+                0.25390625,
+                0.5,
+                0.266,
+                0.5625
+              ],
+              "costs": {
+                "primary": 0.5726374999999999,
+                "mirror": 0.14544375
+              },
+              "temperature": 0.18000000000000005,
+              "probabilities": {
+                "primary": 0.08523160392024892,
+                "mirror": 0.9147683960797511
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.16400000000000003
+          },
+          {
+            "index": 2,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "mirror",
+              "risk": 0.5348958333333333,
+              "expected_gain": 0.2674479166666667,
+              "probe_cost": 0.07674479166666667,
+              "attempts": 1,
+              "observations": {
+                "mirror": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 3,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 3,
+              "cells": [
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.125,
+                  0.5,
+                  0.2,
+                  0.5
+                ],
+                "mirror": [
+                  0.001953125,
+                  0.5,
+                  0.012800000000000004,
+                  0.0625
+                ]
+              },
+              "hamilton_reference": [
+                0.0634765625,
+                0.5,
+                0.10640000000000001,
+                0.28125
+              ],
+              "costs": {
+                "primary": 0.261858671875,
+                "mirror": 0.11914523437500002
+              },
+              "temperature": 0.16400000000000003,
+              "probabilities": {
+                "primary": 0.29521187908872343,
+                "mirror": 0.7047881209112766
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.15120000000000006
+          },
+          {
+            "index": 3,
+            "stage": "move_A_mirror",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "mirror",
+              "risk": 0.4000244140625,
+              "expected_gain": 0.20001220703125,
+              "probe_cost": 0.070001220703125,
+              "attempts": 1,
+              "observations": {
+                "mirror": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 4,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 4,
+              "cells": [
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.03125,
+                  0.5,
+                  0.08000000000000002,
+                  0.25
+                ],
+                "mirror": [
+                  0.00048828125,
+                  0.5,
+                  0.005120000000000002,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.015869140625,
+                0.5,
+                0.04256000000000001,
+                0.15
+              ],
+              "costs": {
+                "primary": 0.16048053417968752,
+                "mirror": 0.1101236748046875
+              },
+              "temperature": 0.15120000000000006,
+              "probabilities": {
+                "primary": 0.4174991802936912,
+                "mirror": 0.5825008197063088
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.14096000000000006
+          },
+          {
+            "index": 4,
+            "stage": "change_B",
+            "alert": "B",
+            "watch": {
+              "action": "probe",
+              "document": "B",
+              "first": "mirror",
+              "risk": 0.4000244140625,
+              "expected_gain": 0.20001220703125,
+              "probe_cost": 0.070001220703125,
+              "attempts": 1,
+              "observations": {
+                "mirror": true
+              }
+            },
+            "correct": true,
+            "score": 0.5,
+            "task_attempts": 5,
+            "task_failures": 1,
+            "probe_attempts": 5,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 5,
+              "cells": [
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.03125,
+                  0.5,
+                  0.08000000000000002,
+                  0.25
+                ],
+                "mirror": [
+                  7.62939453125e-06,
+                  0.5,
+                  0.00032768000000000017,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.015628814697265625,
+                0.5,
+                0.040163840000000006,
+                0.15
+              ],
+              "costs": {
+                "primary": 0.16057061155749514,
+                "mirror": 0.10901496225476076
+              },
+              "temperature": 0.14096000000000006,
+              "probabilities": {
+                "primary": 0.40956917668531734,
+                "mirror": 0.5904308233146827
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "failed"
+                },
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.13276800000000005
+          },
+          {
+            "index": 5,
+            "stage": "alert_B",
+            "alert": "B",
+            "watch": {
+              "action": "probe",
+              "document": "B",
+              "first": "mirror",
+              "risk": 0.26666704813639325,
+              "expected_gain": 0.13333352406819662,
+              "probe_cost": 0.06333335240681967,
+              "attempts": 1,
+              "observations": {
+                "mirror": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 6,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 6,
+              "cells": [
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.7578125,
+                  0.5,
+                  0.632,
+                  0.125
+                ],
+                "mirror": [
+                  1.1920928955078125e-07,
+                  0.5,
+                  2.0971520000000012e-05,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.3789063096046448,
+                0.5,
+                0.31601048576,
+                0.0875
+              ],
+              "costs": {
+                "primary": 0.635959207255906,
+                "mirror": 0.12315721116455093
+              },
+              "temperature": 0.13276800000000005,
+              "probabilities": {
+                "primary": 0.020585025982592327,
+                "mirror": 0.9794149740174076
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.12621440000000006
+          },
+          {
+            "index": 6,
+            "stage": "lose_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "mirror",
+              "risk": 0.3200000014901162,
+              "expected_gain": 0.1600000007450581,
+              "probe_cost": 0.06600000007450582,
+              "attempts": 2,
+              "observations": {
+                "mirror": false,
+                "primary": false
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 2,
+            "task_failures": 2,
+            "probe_attempts": 8,
+            "probe_failures": 3,
+            "response": null,
+            "error": "ValueError: Pinned version unavailable on all authorized routes",
+            "memory": {
+              "max_cells": 2,
+              "batches": 6,
+              "cells": [
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "A",
+              "cells": {
+                "primary": [
+                  0.939453125,
+                  0.5,
+                  0.8528,
+                  0.0625
+                ],
+                "mirror": [
+                  0.7500000018626451,
+                  0.5,
+                  0.60000134217728,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.8447265634313226,
+                0.5,
+                0.7264006710886399,
+                0.05625
+              ],
+              "costs": {
+                "primary": 0.753932687903405,
+                "mirror": 0.6073963947701835
+              },
+              "temperature": 0.12621440000000006,
+              "probabilities": {
+                "primary": 0.23848364933155863,
+                "mirror": 0.7615163506684414
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "failed"
+                },
+                {
+                  "route": "mirror",
+                  "status": "failed"
+                }
+              ]
+            },
+            "temperature": 0.12097152000000005
+          },
+          {
+            "index": 7,
+            "stage": "restore_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "mirror",
+              "risk": 0.5875000000931323,
+              "expected_gain": 0.29375000004656615,
+              "probe_cost": 0.07937500000465662,
+              "attempts": 1,
+              "observations": {
+                "mirror": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 9,
+            "probe_failures": 3,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 7,
+              "cells": [
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.7578125,
+                  0.5,
+                  0.632,
+                  0.125
+                ],
+                "mirror": [
+                  7.450580596923828e-09,
+                  0.5,
+                  3.3554432000000022e-06,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.3789062537252903,
+                0.5,
+                0.3160016777216,
+                0.0875
+              ],
+              "costs": {
+                "primary": 0.6359591515785515,
+                "mirror": 0.12315357639248195
+              },
+              "temperature": 0.12097152000000005,
+              "probabilities": {
+                "primary": 0.01421612349493281,
+                "mirror": 0.985783876505067
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.11677721600000006
+          },
+          {
+            "index": 8,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "mirror",
+              "risk": 0.34578683035859803,
+              "expected_gain": 0.17289341517929901,
+              "probe_cost": 0.06728934151792991,
+              "attempts": 1,
+              "observations": {
+                "mirror": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 10,
+            "probe_failures": 3,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/archive/moved.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 8,
+              "cells": [
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.7578125,
+                  0.5,
+                  0.632,
+                  0.125
+                ],
+                "mirror": [
+                  4.656612873077393e-10,
+                  0.5,
+                  5.368709120000005e-07,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.37890625023283064,
+                0.5,
+                0.316000268435456,
+                0.0875
+              ],
+              "costs": {
+                "primary": 0.635959142395856,
+                "mirror": 0.12315300000286925
+              },
+              "temperature": 0.11677721600000006,
+              "probabilities": {
+                "primary": 0.012232872712435465,
+                "mirror": 0.9877671272875646
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.11342177280000006
+          }
+        ],
+        "exact": 9,
+        "timely": 8,
+        "task_attempts": 35,
+        "task_failures": 3,
+        "probes": 10,
+        "probe_failures": 3,
+        "net_value": 8.0
+      }
+    },
+    "bruit": {
+      "sticky": {
+        "rows": [
+          {
+            "index": 0,
+            "stage": "initial",
+            "alert": null,
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 1,
+              "cells": [
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 1,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 2,
+              "cells": [
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 2,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 3,
+              "cells": [
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 3,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 4,
+              "cells": [
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 4,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 5,
+              "cells": [
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 5,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 6,
+              "cells": [
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 6,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 7,
+              "cells": [
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 7,
+            "stage": "drop_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 0.5,
+            "task_attempts": 5,
+            "task_failures": 1,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 8,
+              "cells": [
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 8,
+            "stage": "quiet",
+            "alert": null,
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 9,
+              "cells": [
+                {
+                  "hits": 8,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 8,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 9,
+            "stage": "quiet",
+            "alert": null,
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 10,
+              "cells": [
+                {
+                  "hits": 9,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 9,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 10,
+            "stage": "quiet",
+            "alert": null,
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 11,
+              "cells": [
+                {
+                  "hits": 10,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 10,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 11,
+            "stage": "restore_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 12,
+              "cells": [
+                {
+                  "hits": 11,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 11,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          }
+        ],
+        "exact": 12,
+        "timely": 11,
+        "task_attempts": 49,
+        "task_failures": 1,
+        "probes": 0,
+        "probe_failures": 0,
+        "net_value": 11.5
+      },
+      "alert_classic": {
+        "rows": [
+          {
+            "index": 0,
+            "stage": "initial",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 1,
+              "cells": [
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 1,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "primary",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 1,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 2,
+              "cells": [
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 2,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "primary",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 2,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 3,
+              "cells": [
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 3,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "primary",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 3,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 4,
+              "cells": [
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 4,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "primary",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 4,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 5,
+              "cells": [
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 5,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "primary",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 5,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 6,
+              "cells": [
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 6,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "primary",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 6,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 7,
+              "cells": [
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 7,
+            "stage": "drop_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "primary",
+                  "good": false
+                },
+                {
+                  "route": "mirror",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 8,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 8,
+              "cells": [
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 8,
+            "stage": "quiet",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 8,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 9,
+              "cells": [
+                {
+                  "hits": 8,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 8,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 9,
+            "stage": "quiet",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 8,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 10,
+              "cells": [
+                {
+                  "hits": 9,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 9,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 10,
+            "stage": "quiet",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 8,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 11,
+              "cells": [
+                {
+                  "hits": 10,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 10,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          },
+          {
+            "index": 11,
+            "stage": "restore_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "attempts": [
+                {
+                  "route": "mirror",
+                  "good": true
+                }
+              ]
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 9,
+            "probe_failures": 1,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 12,
+              "cells": [
+                {
+                  "hits": 11,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 11,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": null,
+            "temperature": null
+          }
+        ],
+        "exact": 12,
+        "timely": 12,
+        "task_attempts": 48,
+        "task_failures": 0,
+        "probes": 9,
+        "probe_failures": 1,
+        "net_value": 11.55
+      },
+      "ocn_value": {
+        "rows": [
+          {
+            "index": 0,
+            "stage": "initial",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 0,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 1,
+              "cells": [
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 0,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.5,
+                  0.5,
+                  0.5,
+                  1.0
+                ],
+                "mirror": [
+                  0.125,
+                  0.5,
+                  0.2,
+                  0.5
+                ]
+              },
+              "hamilton_reference": [
+                0.3125,
+                0.5,
+                0.35,
+                0.75
+              ],
+              "costs": {
+                "primary": 0.56375,
+                "mirror": 0.26625
+              },
+              "temperature": 0.2,
+              "probabilities": {
+                "primary": 0.18429726028236706,
+                "mirror": 0.8157027397176329
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.18000000000000005
+          },
+          {
+            "index": 1,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "primary",
+              "risk": 0.40625,
+              "expected_gain": 0.203125,
+              "probe_cost": 0.0703125,
+              "attempts": 1,
+              "observations": {
+                "primary": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 1,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 2,
+              "cells": [
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 1,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.5,
+                  0.5,
+                  0.5,
+                  1.0
+                ],
+                "mirror": [
+                  0.0078125,
+                  0.5,
+                  0.03200000000000001,
+                  0.125
+                ]
+              },
+              "hamilton_reference": [
+                0.25390625,
+                0.5,
+                0.266,
+                0.5625
+              ],
+              "costs": {
+                "primary": 0.5726374999999999,
+                "mirror": 0.14544375
+              },
+              "temperature": 0.18000000000000005,
+              "probabilities": {
+                "primary": 0.08523160392024892,
+                "mirror": 0.9147683960797511
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.16400000000000003
+          },
+          {
+            "index": 2,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "primary",
+              "risk": 0.2667643229166667,
+              "expected_gain": 0.13338216145833334,
+              "probe_cost": 0.06333821614583333,
+              "attempts": 1,
+              "observations": {
+                "primary": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 2,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 3,
+              "cells": [
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 2,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.125,
+                  0.5,
+                  0.2,
+                  0.5
+                ],
+                "mirror": [
+                  0.001953125,
+                  0.5,
+                  0.012800000000000004,
+                  0.0625
+                ]
+              },
+              "hamilton_reference": [
+                0.0634765625,
+                0.5,
+                0.10640000000000001,
+                0.28125
+              ],
+              "costs": {
+                "primary": 0.261858671875,
+                "mirror": 0.11914523437500002
+              },
+              "temperature": 0.16400000000000003,
+              "probabilities": {
+                "primary": 0.29521187908872343,
+                "mirror": 0.7047881209112766
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.15120000000000006
+          },
+          {
+            "index": 3,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "primary",
+              "risk": 0.20000152587890627,
+              "expected_gain": 0.10000076293945313,
+              "probe_cost": 0.06000007629394532,
+              "attempts": 1,
+              "observations": {
+                "primary": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 3,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "mirror/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 4,
+              "cells": [
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 3,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.03125,
+                  0.5,
+                  0.08000000000000002,
+                  0.25
+                ],
+                "mirror": [
+                  0.00048828125,
+                  0.5,
+                  0.005120000000000002,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.015869140625,
+                0.5,
+                0.04256000000000001,
+                0.15
+              ],
+              "costs": {
+                "primary": 0.16048053417968752,
+                "mirror": 0.1101236748046875
+              },
+              "temperature": 0.15120000000000006,
+              "probabilities": {
+                "primary": 0.4174991802936912,
+                "mirror": 0.5825008197063088
+              },
+              "selected": "mirror",
+              "receipts": [
+                {
+                  "route": "mirror",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.14096000000000006
+          },
+          {
+            "index": 4,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "primary",
+              "risk": 0.16000002384185794,
+              "expected_gain": 0.08000001192092897,
+              "probe_cost": 0.0580000011920929,
+              "attempts": 1,
+              "observations": {
+                "primary": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 4,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 5,
+              "cells": [
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 4,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.03125,
+                  0.5,
+                  0.08000000000000002,
+                  0.25
+                ],
+                "mirror": [
+                  3.0517578125e-05,
+                  0.5,
+                  0.0008192000000000004,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.0156402587890625,
+                0.5,
+                0.04040960000000001,
+                0.15
+              ],
+              "costs": {
+                "primary": 0.1605615907299805,
+                "mirror": 0.10911568951904298
+              },
+              "temperature": 0.14096000000000006,
+              "probabilities": {
+                "primary": 0.4097574669778534,
+                "mirror": 0.5902425330221465
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.13276800000000005
+          },
+          {
+            "index": 5,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "primary",
+              "risk": 0.13333333370586237,
+              "expected_gain": 0.06666666685293118,
+              "probe_cost": 0.056666666685293125,
+              "attempts": 1,
+              "observations": {
+                "primary": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 5,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 6,
+              "cells": [
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 5,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.0078125,
+                  0.5,
+                  0.03200000000000001,
+                  0.125
+                ],
+                "mirror": [
+                  7.62939453125e-06,
+                  0.5,
+                  0.00032768000000000017,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.003910064697265625,
+                0.5,
+                0.016163840000000002,
+                0.0875
+              ],
+              "costs": {
+                "primary": 0.12426650699591064,
+                "mirror": 0.10652960769317628
+              },
+              "temperature": 0.13276800000000005,
+              "probabilities": {
+                "primary": 0.4666512885436796,
+                "mirror": 0.5333487114563205
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.12621440000000006
+          },
+          {
+            "index": 6,
+            "stage": "alert_A",
+            "alert": "A",
+            "watch": {
+              "action": "probe",
+              "document": "A",
+              "first": "primary",
+              "risk": 0.11428571429153504,
+              "expected_gain": 0.05714285714576752,
+              "probe_cost": 0.055714285714576754,
+              "attempts": 1,
+              "observations": {
+                "primary": true
+              }
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 6,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "primary/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 7,
+              "cells": [
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 6,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  0.00048828125,
+                  0.5,
+                  0.005120000000000002,
+                  0.05
+                ],
+                "mirror": [
+                  7.62939453125e-06,
+                  0.5,
+                  0.00032768000000000017,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                0.000247955322265625,
+                0.5,
+                0.0027238400000000012,
+                0.05
+              ],
+              "costs": {
+                "primary": 0.10633944538181153,
+                "mirror": 0.10514065545407716
+              },
+              "temperature": 0.12621440000000006,
+              "probabilities": {
+                "primary": 0.4976255068446456,
+                "mirror": 0.5023744931553544
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.12097152000000005
+          },
+          {
+            "index": 7,
+            "stage": "drop_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip",
+              "document": "A",
+              "first": "primary",
+              "risk": 0.10000000000009096,
+              "expected_gain": 0.05000000000004548,
+              "probe_cost": 0.055000000000004545,
+              "attempts": 0,
+              "observations": {}
+            },
+            "correct": true,
+            "score": 0.5,
+            "task_attempts": 5,
+            "task_failures": 1,
+            "probe_attempts": 6,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 8,
+              "cells": [
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 7,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  3.0517578125e-05,
+                  0.5,
+                  0.0008192000000000004,
+                  0.05
+                ],
+                "mirror": [
+                  7.62939453125e-06,
+                  0.5,
+                  0.00032768000000000017,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                1.9073486328125e-05,
+                0.5,
+                0.0005734400000000003,
+                0.05
+              ],
+              "costs": {
+                "primary": 0.10518611477487794,
+                "mirror": 0.10507636668308107
+              },
+              "temperature": 0.12097152000000005,
+              "probabilities": {
+                "primary": 0.499773194376103,
+                "mirror": 0.5002268056238971
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.11677721600000006
+          },
+          {
+            "index": 8,
+            "stage": "quiet",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 6,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 9,
+              "cells": [
+                {
+                  "hits": 8,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 8,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  1.9073486328125e-06,
+                  0.5,
+                  0.00013107200000000006,
+                  0.05
+                ],
+                "mirror": [
+                  7.62939453125e-06,
+                  0.5,
+                  0.00032768000000000017,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                4.76837158203125e-06,
+                0.5,
+                0.0002293760000000001,
+                0.05
+              ],
+              "costs": {
+                "primary": 0.10502993581670778,
+                "mirror": 0.105072118439657
+              },
+              "temperature": 0.11677721600000006,
+              "probabilities": {
+                "primary": 0.5000903057632633,
+                "mirror": 0.4999096942367368
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.11342177280000006
+          },
+          {
+            "index": 9,
+            "stage": "quiet",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 6,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 10,
+              "cells": [
+                {
+                  "hits": 9,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 9,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  4.76837158203125e-07,
+                  0.5,
+                  5.242880000000003e-05,
+                  0.05
+                ],
+                "mirror": [
+                  1.9073486328125e-06,
+                  0.5,
+                  0.00013107200000000006,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                1.1920928955078125e-06,
+                0.5,
+                9.175040000000005e-05,
+                0.05
+              ],
+              "costs": {
+                "primary": 0.1050118216167707,
+                "mirror": 0.105028265512508
+              },
+              "temperature": 0.11342177280000006,
+              "probabilities": {
+                "primary": 0.500036245015623,
+                "mirror": 0.49996375498437695
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.11073741824000005
+          },
+          {
+            "index": 10,
+            "stage": "quiet",
+            "alert": null,
+            "watch": {
+              "action": "skip",
+              "reason": "no_alert"
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 6,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 11,
+              "cells": [
+                {
+                  "hits": 10,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 10,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  1.1920928955078125e-07,
+                  0.5,
+                  2.0971520000000012e-05,
+                  0.05
+                ],
+                "mirror": [
+                  4.76837158203125e-07,
+                  0.5,
+                  5.242880000000003e-05,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                2.980232238769531e-07,
+                0.5,
+                3.670016000000002e-05,
+                0.05
+              ],
+              "costs": {
+                "primary": 0.10500469046965206,
+                "mirror": 0.10501116073958638
+              },
+              "temperature": 0.11073741824000005,
+              "probabilities": {
+                "primary": 0.5000146072349241,
+                "mirror": 0.4999853927650759
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.10858993459200005
+          },
+          {
+            "index": 11,
+            "stage": "restore_A",
+            "alert": "A",
+            "watch": {
+              "action": "skip",
+              "document": "A",
+              "first": "mirror",
+              "risk": 0.10000152587890626,
+              "expected_gain": 0.05000076293945313,
+              "probe_cost": 0.055000076293945314,
+              "attempts": 0,
+              "observations": {}
+            },
+            "correct": true,
+            "score": 1.0,
+            "task_attempts": 4,
+            "task_failures": 0,
+            "probe_attempts": 6,
+            "probe_failures": 0,
+            "response": {
+              "values": {
+                "origin": "Taza",
+                "destination": "Fes"
+              },
+              "paths": {
+                "A": "mirror/A.txt",
+                "B": "primary/B.txt"
+              },
+              "abstain": false
+            },
+            "error": null,
+            "memory": {
+              "max_cells": 2,
+              "batches": 12,
+              "cells": [
+                {
+                  "hits": 11,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 715,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                },
+                {
+                  "hits": 11,
+                  "misses": 1,
+                  "evictions": 0,
+                  "entries": 1,
+                  "serialized_bytes": 712,
+                  "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+                }
+              ],
+              "semantics": "bounded sharded reuse, not learned differentiation"
+            },
+            "last_decision": {
+              "document": "B",
+              "cells": {
+                "primary": [
+                  2.9802322387695312e-08,
+                  0.5,
+                  8.388608000000005e-06,
+                  0.05
+                ],
+                "mirror": [
+                  1.1920928955078125e-07,
+                  0.5,
+                  2.0971520000000012e-05,
+                  0.05
+                ]
+              },
+              "hamilton_reference": [
+                7.450580596923828e-08,
+                0.5,
+                1.4680064000000009e-05,
+                0.05
+              ],
+              "costs": {
+                "primary": 0.10500186664363895,
+                "mirror": 0.10500442792952254
+              },
+              "temperature": 0.10858993459200005,
+              "probabilities": {
+                "primary": 0.5000058966926656,
+                "mirror": 0.49999410330733435
+              },
+              "selected": "primary",
+              "receipts": [
+                {
+                  "route": "primary",
+                  "status": "value"
+                }
+              ]
+            },
+            "temperature": 0.10687194767360005
+          }
+        ],
+        "exact": 12,
+        "timely": 11,
+        "task_attempts": 49,
+        "task_failures": 1,
+        "probes": 6,
+        "probe_failures": 0,
+        "net_value": 11.2
+      }
+    }
+  }
+}

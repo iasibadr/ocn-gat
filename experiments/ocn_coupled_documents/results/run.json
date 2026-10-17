@@ -1,0 +1,1548 @@
+{
+  "protocol_sha256": "55c32e6c9050604ebf95863e0a9ade3082b6ce9dd26494f43ae465c3faf06847",
+  "code_sha256": "20e8f735c84ba563ddaf6332488257418b37f5abe12ab2263b3f67677172b0ad",
+  "model": {
+    "name": "qwen3.5:9b",
+    "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "size_bytes": 6594474711
+  },
+  "calls": {
+    "classical": 2,
+    "ocn": 2
+  },
+  "results": {
+    "classical": [
+      {
+        "stage": "initial",
+        "changed": null,
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "primary/A.txt",
+            "B": "primary/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 4,
+        "task_failures": 0,
+        "probe_attempts": 0,
+        "probe_failures": 0,
+        "total_attempts": 4,
+        "total_failures": 0,
+        "memory": {
+          "max_cells": 2,
+          "batches": 1,
+          "cells": [
+            {
+              "hits": 0,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 0,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": null,
+        "temperature": null,
+        "recent_decisions": null
+      },
+      {
+        "stage": "primary_A_missing",
+        "changed": "A",
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "mirror/A.txt",
+            "B": "primary/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 5,
+        "task_failures": 1,
+        "probe_attempts": 0,
+        "probe_failures": 0,
+        "total_attempts": 9,
+        "total_failures": 1,
+        "memory": {
+          "max_cells": 2,
+          "batches": 2,
+          "cells": [
+            {
+              "hits": 1,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 1,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": null,
+        "temperature": null,
+        "recent_decisions": null
+      },
+      {
+        "stage": "mirror_A_moved",
+        "changed": "A",
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "mirror/archive/moved.txt",
+            "B": "primary/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 4,
+        "task_failures": 0,
+        "probe_attempts": 0,
+        "probe_failures": 0,
+        "total_attempts": 13,
+        "total_failures": 1,
+        "memory": {
+          "max_cells": 2,
+          "batches": 3,
+          "cells": [
+            {
+              "hits": 2,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 2,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": null,
+        "temperature": null,
+        "recent_decisions": null
+      },
+      {
+        "stage": "primary_B_changed",
+        "changed": "B",
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "mirror/archive/moved.txt",
+            "B": "mirror/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 5,
+        "task_failures": 1,
+        "probe_attempts": 0,
+        "probe_failures": 0,
+        "total_attempts": 18,
+        "total_failures": 2,
+        "memory": {
+          "max_cells": 2,
+          "batches": 4,
+          "cells": [
+            {
+              "hits": 3,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 3,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": null,
+        "temperature": null,
+        "recent_decisions": null
+      },
+      {
+        "stage": "A_unavailable",
+        "changed": "A",
+        "correct": true,
+        "result": null,
+        "error": "ValueError: Pinned version unavailable on all authorized routes",
+        "task_attempts": 2,
+        "task_failures": 2,
+        "probe_attempts": 0,
+        "probe_failures": 0,
+        "total_attempts": 20,
+        "total_failures": 4,
+        "memory": {
+          "max_cells": 2,
+          "batches": 4,
+          "cells": [
+            {
+              "hits": 3,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 3,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": null,
+        "temperature": null,
+        "recent_decisions": null
+      },
+      {
+        "stage": "A_restored",
+        "changed": "A",
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "mirror/archive/moved.txt",
+            "B": "mirror/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 4,
+        "task_failures": 0,
+        "probe_attempts": 0,
+        "probe_failures": 0,
+        "total_attempts": 24,
+        "total_failures": 4,
+        "memory": {
+          "max_cells": 2,
+          "batches": 5,
+          "cells": [
+            {
+              "hits": 4,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 4,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": null,
+        "temperature": null,
+        "recent_decisions": null
+      }
+    ],
+    "ocn": [
+      {
+        "stage": "initial",
+        "changed": null,
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "mirror/A.txt",
+            "B": "mirror/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 4,
+        "task_failures": 0,
+        "probe_attempts": 0,
+        "probe_failures": 0,
+        "total_attempts": 4,
+        "total_failures": 0,
+        "memory": {
+          "max_cells": 2,
+          "batches": 1,
+          "cells": [
+            {
+              "hits": 0,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 0,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": {},
+        "temperature": 0.18000000000000005,
+        "recent_decisions": [
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ],
+              "mirror": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            },
+            "hamilton_reference": [
+              0.5,
+              0.5,
+              0.5,
+              1.0
+            ],
+            "costs": {
+              "primary": 0.5499999999999999,
+              "mirror": 0.5499999999999999
+            },
+            "temperature": 0.2,
+            "probabilities": {
+              "primary": 0.5,
+              "mirror": 0.5
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ],
+              "mirror": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ]
+            },
+            "hamilton_reference": [
+              0.5,
+              0.5,
+              0.5,
+              1.0
+            ],
+            "costs": {
+              "primary": 0.5499999999999999,
+              "mirror": 0.5499999999999999
+            },
+            "temperature": 0.2,
+            "probabilities": {
+              "primary": 0.5,
+              "mirror": 0.5
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ],
+              "mirror": [
+                0.125,
+                0.5,
+                0.2,
+                0.5
+              ]
+            },
+            "hamilton_reference": [
+              0.3125,
+              0.5,
+              0.35,
+              0.75
+            ],
+            "costs": {
+              "primary": 0.56375,
+              "mirror": 0.26625
+            },
+            "temperature": 0.2,
+            "probabilities": {
+              "primary": 0.18429726028236706,
+              "mirror": 0.8157027397176329
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ],
+              "mirror": [
+                0.125,
+                0.5,
+                0.2,
+                0.5
+              ]
+            },
+            "hamilton_reference": [
+              0.3125,
+              0.5,
+              0.35,
+              0.75
+            ],
+            "costs": {
+              "primary": 0.56375,
+              "mirror": 0.26625
+            },
+            "temperature": 0.2,
+            "probabilities": {
+              "primary": 0.18429726028236706,
+              "mirror": 0.8157027397176329
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "stage": "primary_A_missing",
+        "changed": "A",
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "mirror/A.txt",
+            "B": "mirror/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 4,
+        "task_failures": 0,
+        "probe_attempts": 2,
+        "probe_failures": 1,
+        "total_attempts": 10,
+        "total_failures": 1,
+        "memory": {
+          "max_cells": 2,
+          "batches": 2,
+          "cells": [
+            {
+              "hits": 1,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 1,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": {
+          "primary": false,
+          "mirror": true
+        },
+        "temperature": 0.16400000000000003,
+        "recent_decisions": [
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.875,
+                0.5,
+                0.8,
+                0.5
+              ],
+              "mirror": [
+                0.0078125,
+                0.5,
+                0.03200000000000001,
+                0.125
+              ]
+            },
+            "hamilton_reference": [
+              0.44140625,
+              0.5,
+              0.41600000000000004,
+              0.3125
+            ],
+            "costs": {
+              "primary": 0.7726343750000001,
+              "mirror": 0.147940625
+            },
+            "temperature": 0.18000000000000005,
+            "probabilities": {
+              "primary": 0.03016274184507436,
+              "mirror": 0.9698372581549256
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ],
+              "mirror": [
+                0.03125,
+                0.5,
+                0.08000000000000002,
+                0.25
+              ]
+            },
+            "hamilton_reference": [
+              0.265625,
+              0.5,
+              0.29000000000000004,
+              0.625
+            ],
+            "costs": {
+              "primary": 0.5698749999999999,
+              "mirror": 0.17650000000000002
+            },
+            "temperature": 0.18000000000000005,
+            "probabilities": {
+              "primary": 0.101067742678363,
+              "mirror": 0.8989322573216371
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.875,
+                0.5,
+                0.8,
+                0.5
+              ],
+              "mirror": [
+                0.001953125,
+                0.5,
+                0.012800000000000004,
+                0.0625
+              ]
+            },
+            "hamilton_reference": [
+              0.4384765625,
+              0.5,
+              0.40640000000000004,
+              0.28125
+            ],
+            "costs": {
+              "primary": 0.77371,
+              "mirror": 0.13599656250000003
+            },
+            "temperature": 0.18000000000000005,
+            "probabilities": {
+              "primary": 0.02811723557316558,
+              "mirror": 0.9718827644268343
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ],
+              "mirror": [
+                0.0078125,
+                0.5,
+                0.03200000000000001,
+                0.125
+              ]
+            },
+            "hamilton_reference": [
+              0.25390625,
+              0.5,
+              0.266,
+              0.5625
+            ],
+            "costs": {
+              "primary": 0.5726374999999999,
+              "mirror": 0.14544375
+            },
+            "temperature": 0.18000000000000005,
+            "probabilities": {
+              "primary": 0.08523160392024892,
+              "mirror": 0.9147683960797511
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "stage": "mirror_A_moved",
+        "changed": "A",
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "mirror/archive/moved.txt",
+            "B": "mirror/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 4,
+        "task_failures": 0,
+        "probe_attempts": 4,
+        "probe_failures": 2,
+        "total_attempts": 16,
+        "total_failures": 2,
+        "memory": {
+          "max_cells": 2,
+          "batches": 3,
+          "cells": [
+            {
+              "hits": 2,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 2,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": {
+          "primary": false,
+          "mirror": true
+        },
+        "temperature": 0.15120000000000006,
+        "recent_decisions": [
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.96875,
+                0.5,
+                0.92,
+                0.25
+              ],
+              "mirror": [
+                0.0001220703125,
+                0.5,
+                0.0020480000000000008,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.48443603515625,
+              0.5,
+              0.46102400000000004,
+              0.15
+            ],
+            "costs": {
+              "primary": 0.8194310669433594,
+              "mirror": 0.13152670209960937
+            },
+            "temperature": 0.16400000000000003,
+            "probabilities": {
+              "primary": 0.014853734469338142,
+              "mirror": 0.9851462655306619
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ],
+              "mirror": [
+                0.001953125,
+                0.5,
+                0.012800000000000004,
+                0.0625
+              ]
+            },
+            "hamilton_reference": [
+              0.2509765625,
+              0.5,
+              0.2564,
+              0.53125
+            ],
+            "costs": {
+              "primary": 0.5738987499999999,
+              "mirror": 0.13368531250000001
+            },
+            "temperature": 0.16400000000000003,
+            "probabilities": {
+              "primary": 0.06391044896800879,
+              "mirror": 0.9360895510319911
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.96875,
+                0.5,
+                0.92,
+                0.25
+              ],
+              "mirror": [
+                3.0517578125e-05,
+                0.5,
+                0.0008192000000000004,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4843902587890625,
+              0.5,
+              0.46040960000000003,
+              0.15
+            ],
+            "costs": {
+              "primary": 0.8194270248608398,
+              "mirror": 0.13123112364990236
+            },
+            "temperature": 0.16400000000000003,
+            "probabilities": {
+              "primary": 0.014827744201105976,
+              "mirror": 0.9851722557988939
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.5,
+                0.5,
+                0.5,
+                1.0
+              ],
+              "mirror": [
+                0.00048828125,
+                0.5,
+                0.005120000000000002,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.250244140625,
+              0.5,
+              0.25256,
+              0.525
+            ],
+            "costs": {
+              "primary": 0.574247,
+              "mirror": 0.13051514062500003
+            },
+            "temperature": 0.16400000000000003,
+            "probabilities": {
+              "primary": 0.0626389015643972,
+              "mirror": 0.9373610984356028
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "stage": "primary_B_changed",
+        "changed": "B",
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "mirror/archive/moved.txt",
+            "B": "mirror/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 4,
+        "task_failures": 0,
+        "probe_attempts": 6,
+        "probe_failures": 3,
+        "total_attempts": 22,
+        "total_failures": 3,
+        "memory": {
+          "max_cells": 2,
+          "batches": 4,
+          "cells": [
+            {
+              "hits": 3,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 3,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": {
+          "primary": false,
+          "mirror": true
+        },
+        "temperature": 0.14096000000000006,
+        "recent_decisions": [
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.96875,
+                0.5,
+                0.92,
+                0.25
+              ],
+              "mirror": [
+                7.62939453125e-06,
+                0.5,
+                0.00032768000000000017,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4843788146972656,
+              0.5,
+              0.46016384000000005,
+              0.15
+            ],
+            "costs": {
+              "primary": 0.81942500634021,
+              "mirror": 0.1311193570374756
+            },
+            "temperature": 0.15120000000000006,
+            "probabilities": {
+              "primary": 0.010433078194054545,
+              "mirror": 0.9895669218059455
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.875,
+                0.5,
+                0.8,
+                0.5
+              ],
+              "mirror": [
+                3.0517578125e-05,
+                0.5,
+                0.0008192000000000004,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4375152587890625,
+              0.5,
+              0.40040960000000003,
+              0.275
+            ],
+            "costs": {
+              "primary": 0.7739655796484376,
+              "mirror": 0.1316446784375
+            },
+            "temperature": 0.15120000000000006,
+            "probabilities": {
+              "primary": 0.014089244853107122,
+              "mirror": 0.9859107551468929
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.96875,
+                0.5,
+                0.92,
+                0.25
+              ],
+              "mirror": [
+                1.9073486328125e-06,
+                0.5,
+                0.00013107200000000006,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4843759536743164,
+              0.5,
+              0.460065536,
+              0.15
+            ],
+            "costs": {
+              "primary": 0.8194240985100525,
+              "mirror": 0.1310762665843689
+            },
+            "temperature": 0.15120000000000006,
+            "probabilities": {
+              "primary": 0.010430198276160279,
+              "mirror": 0.9895698017238398
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.875,
+                0.5,
+                0.8,
+                0.5
+              ],
+              "mirror": [
+                7.62939453125e-06,
+                0.5,
+                0.00032768000000000017,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4375038146972656,
+              0.5,
+              0.40016384000000005,
+              0.275
+            ],
+            "costs": {
+              "primary": 0.7739675734121094,
+              "mirror": 0.131536924109375
+            },
+            "temperature": 0.15120000000000006,
+            "probabilities": {
+              "primary": 0.014079165855519368,
+              "mirror": 0.9859208341444806
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "stage": "A_unavailable",
+        "changed": "A",
+        "correct": true,
+        "result": null,
+        "error": "ValueError: Pinned version unavailable on all authorized routes",
+        "task_attempts": 2,
+        "task_failures": 2,
+        "probe_attempts": 8,
+        "probe_failures": 5,
+        "total_attempts": 26,
+        "total_failures": 7,
+        "memory": {
+          "max_cells": 2,
+          "batches": 4,
+          "cells": [
+            {
+              "hits": 3,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 3,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": {
+          "primary": false,
+          "mirror": false
+        },
+        "temperature": 0.13276800000000005,
+        "recent_decisions": [
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.875,
+                0.5,
+                0.8,
+                0.5
+              ],
+              "mirror": [
+                3.0517578125e-05,
+                0.5,
+                0.0008192000000000004,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4375152587890625,
+              0.5,
+              0.40040960000000003,
+              0.275
+            ],
+            "costs": {
+              "primary": 0.7739655796484376,
+              "mirror": 0.1316446784375
+            },
+            "temperature": 0.15120000000000006,
+            "probabilities": {
+              "primary": 0.014089244853107122,
+              "mirror": 0.9859107551468929
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.96875,
+                0.5,
+                0.92,
+                0.25
+              ],
+              "mirror": [
+                1.9073486328125e-06,
+                0.5,
+                0.00013107200000000006,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4843759536743164,
+              0.5,
+              0.460065536,
+              0.15
+            ],
+            "costs": {
+              "primary": 0.8194240985100525,
+              "mirror": 0.1310762665843689
+            },
+            "temperature": 0.15120000000000006,
+            "probabilities": {
+              "primary": 0.010430198276160279,
+              "mirror": 0.9895698017238398
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.875,
+                0.5,
+                0.8,
+                0.5
+              ],
+              "mirror": [
+                7.62939453125e-06,
+                0.5,
+                0.00032768000000000017,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4375038146972656,
+              0.5,
+              0.40016384000000005,
+              0.275
+            ],
+            "costs": {
+              "primary": 0.7739675734121094,
+              "mirror": 0.131536924109375
+            },
+            "temperature": 0.15120000000000006,
+            "probabilities": {
+              "primary": 0.014079165855519368,
+              "mirror": 0.9859208341444806
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.9921875,
+                0.5,
+                0.968,
+                0.125
+              ],
+              "mirror": [
+                0.7500001192092896,
+                0.5,
+                0.60002097152,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.8710938096046448,
+              0.5,
+              0.78401048576,
+              0.0875
+            ],
+            "costs": {
+              "primary": 0.8125884507702776,
+              "mirror": 0.6103989546789225
+            },
+            "temperature": 0.14096000000000006,
+            "probabilities": {
+              "primary": 0.19241792800758975,
+              "mirror": 0.8075820719924103
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "failed"
+              },
+              {
+                "route": "primary",
+                "status": "failed"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "stage": "A_restored",
+        "changed": "A",
+        "correct": true,
+        "result": {
+          "values": {
+            "origin": "Taza",
+            "destination": "Fes"
+          },
+          "abstain": false,
+          "paths": {
+            "A": "mirror/archive/moved.txt",
+            "B": "mirror/B.txt"
+          }
+        },
+        "error": null,
+        "task_attempts": 4,
+        "task_failures": 0,
+        "probe_attempts": 10,
+        "probe_failures": 6,
+        "total_attempts": 32,
+        "total_failures": 8,
+        "memory": {
+          "max_cells": 2,
+          "batches": 5,
+          "cells": [
+            {
+              "hits": 4,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 715,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            },
+            {
+              "hits": 4,
+              "misses": 1,
+              "evictions": 0,
+              "entries": 1,
+              "serialized_bytes": 712,
+              "byte_scope": "UTF-8 serialized entries plus key bytes; not Python heap size"
+            }
+          ],
+          "semantics": "bounded sharded reuse, not learned differentiation"
+        },
+        "probes": {
+          "primary": false,
+          "mirror": true
+        },
+        "temperature": 0.12621440000000006,
+        "recent_decisions": [
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.99951171875,
+                0.5,
+                0.99488,
+                0.05
+              ],
+              "mirror": [
+                0.2343750074505806,
+                0.5,
+                0.33600335544320004,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.6169433631002903,
+              0.5,
+              0.6654416777216,
+              0.05
+            ],
+            "costs": {
+              "primary": 0.8239658083370837,
+              "mirror": 0.30962212377601395
+            },
+            "temperature": 0.13276800000000005,
+            "probabilities": {
+              "primary": 0.020352213886814546,
+              "mirror": 0.9796477861131855
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.875,
+                0.5,
+                0.8,
+                0.5
+              ],
+              "mirror": [
+                1.9073486328125e-06,
+                0.5,
+                0.00013107200000000006,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4375009536743164,
+              0.5,
+              0.400065536,
+              0.275
+            ],
+            "costs": {
+              "primary": 0.7739683022530274,
+              "mirror": 0.13149547032734377
+            },
+            "temperature": 0.13276800000000005,
+            "probabilities": {
+              "primary": 0.007852312734340134,
+              "mirror": 0.9921476872656599
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "A",
+            "cells": {
+              "primary": [
+                0.99951171875,
+                0.5,
+                0.99488,
+                0.05
+              ],
+              "mirror": [
+                0.05859375186264515,
+                0.5,
+                0.13440134217728003,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.5290527353063226,
+              0.5,
+              0.56464067108864,
+              0.05
+            ],
+            "costs": {
+              "primary": 0.8280498171642654,
+              "mirror": 0.18549510215604403
+            },
+            "temperature": 0.13276800000000005,
+            "probabilities": {
+              "primary": 0.007847509399424062,
+              "mirror": 0.9921524906005759
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          },
+          {
+            "document": "B",
+            "cells": {
+              "primary": [
+                0.875,
+                0.5,
+                0.8,
+                0.5
+              ],
+              "mirror": [
+                4.76837158203125e-07,
+                0.5,
+                5.242880000000003e-05,
+                0.05
+              ]
+            },
+            "hamilton_reference": [
+              0.4375002384185791,
+              0.5,
+              0.4000262144,
+              0.275
+            ],
+            "costs": {
+              "primary": 0.7739685766232569,
+              "mirror": 0.13147930080183595
+            },
+            "temperature": 0.13276800000000005,
+            "probabilities": {
+              "primary": 0.007851347886694138,
+              "mirror": 0.9921486521133058
+            },
+            "selected": "mirror",
+            "receipts": [
+              {
+                "route": "mirror",
+                "status": "value"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
