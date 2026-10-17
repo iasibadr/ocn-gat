@@ -1,5 +1,33 @@
 # OCN / GAT — adaptation contrôlée des agents
 
+## English overview
+
+OCN (Organisation Cognitive Numérique) is Charadi Badr's experimental framework
+for adapting an existing agent when its documents or access paths change. GAT
+(Generative Agent Transformer) is the prototype tooling used to create and
+integrate bounded document agents. An existing language model remains the
+worker; this repository does not train a new LLM or make arbitrary agents
+autonomous.
+
+**Try it without an API key** (Python 3.10+):
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install ./packages/ocn-core
+.venv/bin/python packages/ocn-core/examples/evidence_context.py
+```
+
+The example moves a document and checks that an authorized source is recovered.
+Its deterministic worker does not demonstrate language understanding. The
+[recorded experiments](docs/RESEARCH_STATUS.md) include unfavorable results:
+OCN has **not** shown a general advantage over strong classical baselines.
+Contributions that reproduce a result, expose a failure, or propose a fair
+comparison are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). The code is
+[MIT licensed](LICENSE), with attribution in [AUTHORS.md](AUTHORS.md) and
+[CITATION.cff](CITATION.cff).
+
+## Présentation en français
+
 **OCN** (Organisation Cognitive Numérique) est un prototype de recherche de
 Charadi Badr. Il ajoute à des agents des mécanismes bornés de sélection,
 mémoire, contrôle d'accès et reprise lorsque des documents ou chemins changent.
