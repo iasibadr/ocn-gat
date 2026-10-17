@@ -2,10 +2,11 @@
 
 ## English overview
 
-OCN (Organisation Cognitive Numérique) is Charadi Badr's experimental framework
-for adapting an existing agent when its documents or access paths change. GAT
-(Generative Agent Transformer) is the prototype tooling used to create and
-integrate bounded document agents. An existing language model remains the
+OCN stands for *Organisation Cognitive Numérique* ("Digital Cognitive
+Organization" in English). It is Charadi Badr's experimental framework for
+adapting an existing agent when its documents or access paths change. GAT
+stands for *Generative Agent Transformer*, the prototype tooling used to create
+and integrate bounded document agents. An existing language model remains the
 worker; this repository does not train a new LLM or make arbitrary agents
 autonomous.
 
