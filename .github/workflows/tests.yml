@@ -26,6 +26,17 @@ jobs:
           sudo apt-get install -y bubblewrap
       - name: Install selected core
         run: python -m pip install ./packages/ocn-core
+      - name: Verify sandbox availability
+        run: |
+          python - <<'PY'
+          from ocn_core.agent_integration import Integration
+          from ocn_core.sandbox_trial import run_trial
+          source = b'def build_synthesizer(model):\n    return lambda question, documents: question\n'
+          result = run_trial(Integration(source, 'build_synthesizer'), model='fixture', question='test', documents=[])
+          print(result, flush=True)
+          if result['status'] != 'completed':
+              raise SystemExit('Sandbox unavailable on this runner')
+          PY
       - name: Core tests
         run: python -m unittest discover -s packages/ocn-core/tests -q
       - name: Offline document demonstration
