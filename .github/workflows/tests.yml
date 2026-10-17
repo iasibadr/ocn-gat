@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   offline:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     strategy:
       fail-fast: false
@@ -24,6 +24,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y bubblewrap
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
       - name: Install selected core
         run: python -m pip install ./packages/ocn-core
       - name: Verify sandbox availability
