@@ -27,6 +27,15 @@ comparison are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). The code is
 [MIT licensed](LICENSE), with attribution in [AUTHORS.md](AUTHORS.md) and
 [CITATION.cff](CITATION.cff).
 
+## Research update — October 2026
+
+The [latest progress report](docs/RESEARCH_UPDATE_2026_10.md) describes real
+LLM pilots assembled with smolagents. The latest OCN controller achieved 9/12
+successful missions, tying the stronger classical control. This is a
+documentation update: the newer laboratory pilot code and traces are not yet
+packaged here, and the executable core is unchanged. No general superiority
+or independent third-party application validation is claimed.
+
 ## Présentation en français
 
 **OCN** (Organisation Cognitive Numérique) est un prototype de recherche de
