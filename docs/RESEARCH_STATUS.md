@@ -1,5 +1,19 @@
 # État des preuves
 
+## Actualisation du 25 octobre 2026
+
+Le [bilan récent](RESEARCH_UPDATE_2026_10.md) décrit les pilotes SA-1 à SA-3 :
+le dernier obtient 9/12 pour OCN et 9/12 pour le meilleur témoin classique.
+Les agents ont été assemblés par nous avec smolagents et un modèle externe ;
+il ne s'agit pas encore d'une application tierce indépendante testée telle quelle.
+Le code et les traces de ces nouveaux pilotes ne sont pas inclus dans cette
+mise à jour documentaire. Le noyau public reste inchangé. La prochaine étape
+est un test avant/après sur un agent existant, avec protocole et reproduction
+publiques. La supériorité générale et l'apport propre du quaternion restent
+non démontrés.
+
+## Expériences incluses dans ce dépôt
+
 Ce dépôt est une **préversion de recherche**. Le noyau logiciel offre des
 contrats de tâches, des budgets, des membranes d'accès, une mémoire bornée et
 des chemins de reprise documentaire. Les quatre expériences incluses testent
